@@ -1,0 +1,22 @@
+{
+  "name": "juninho",
+  "version": "1.0.0",
+  "description": "Um bot de economia com inventário, interações e loja. Organiza o banco de dados por player com todas as infos.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon discord.js",
+    "dev": "node ",
+    "price": "node services/db/createprice.js"
+  },
+  "author": "Henrique Rizzo",
+  "license": "GPL",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.2"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
