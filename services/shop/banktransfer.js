@@ -3,7 +3,7 @@ const query = require("../db/query");
 const usermodel = require("../models/usermodel");
 const find = require("../db/find");
 
-export default async function banktransfer(username, discriminator, args) {
+const banktransfer = async function(username, discriminator, args) {
   var retorno = [];
   dbconnect();
   const docs = await query(username, discriminator);
@@ -57,3 +57,4 @@ export default async function banktransfer(username, discriminator, args) {
   }
   return retorno;
 }
+module.exports = banktransfer

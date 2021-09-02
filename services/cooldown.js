@@ -1,7 +1,7 @@
 const query = require("./db/query");
 const dbconnect = require("./db/dbconnect");
 
-export default async function cooldown(arg, username, discriminator) {
+const cooldown = async function(arg, username, discriminator) {
   dbconnect();
   const docs = await query(username, discriminator);
   const data = new Date();
@@ -67,3 +67,4 @@ export default async function cooldown(arg, username, discriminator) {
   }
   return retorno;
 }
+module.exports = cooldown

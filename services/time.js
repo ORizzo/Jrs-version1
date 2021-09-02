@@ -1,6 +1,6 @@
 const dbconnect = require("./db/dbconnect");
 
-export default async function time(username, discriminator) {
+const time = async function (username, discriminator) {
   dbconnect();
   const data = new Date();
   const docs = await query(username, discriminator);
@@ -29,4 +29,5 @@ export default async function time(username, discriminator) {
       .toString()
       .slice(0, 2)} segundos.`;
   }
-}
+};
+module.exports = time

@@ -2,7 +2,7 @@ const dbconnect = require("./dbconnect");
 const query = require("./query");
 const create = require("./create");
 
-export default async function registrar(username, discriminator) {
+const registrar = async function(username, discriminator) {
   try {
     dbconnect();
     var retorno = [];
@@ -24,3 +24,4 @@ export default async function registrar(username, discriminator) {
   }
   return retorno;
 }
+module.exports = registrar

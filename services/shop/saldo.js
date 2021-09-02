@@ -1,7 +1,7 @@
 const dbconnect = require("../db/dbconnect");
 const query = require("../db/query");
 
-export default async function saldo(username, discriminator) {
+const saldo = async function(username, discriminator) {
   const docs = await query(username, discriminator);
   var retorno = [];
   if (docs[0] == undefined) {
@@ -18,3 +18,4 @@ export default async function saldo(username, discriminator) {
   }
   return retorno;
 }
+module.exports = saldo

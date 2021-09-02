@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const embed = new Discord.MessageEmbed();
 
-export default async function ajuda() {
+const ajuda =  async function() {
   var embedjr = embed
     .setTitle("Escola do tráfico :school:")
     .setDescription(
@@ -18,3 +18,4 @@ export default async function ajuda() {
     .setColor("#D55745");
   return embedjr;
 }
+module.exports = ajuda

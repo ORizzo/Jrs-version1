@@ -68,7 +68,7 @@ client.on("message", async (message) => {
     if (command === "add") {
       if (
         message.author.username === "ORizzo" &&
-        message.author.discriminator === "8734"
+        message.author.discriminator === "7716"
       ) {
         add();
         message.channel.send("Dinheiro adicionado!");

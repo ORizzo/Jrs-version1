@@ -4,7 +4,7 @@ const getRandomIntInclusive = require("../blackjack");
 const usermodel = require("../models/usermodel");
 const cooldown = require("../cooldown");
 
-export default async function plantão(username, discriminator) {
+const plantão = async function(username, discriminator) {
   const RInt = getRandomIntInclusive(1, 3);
   dbconnect();
   const docs = await query(username, discriminator);
@@ -64,3 +64,4 @@ export default async function plantão(username, discriminator) {
     return retorno;
   }
 }
+module.exports = plantão

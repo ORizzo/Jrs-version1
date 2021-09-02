@@ -1,10 +1,11 @@
 const dbconnect = require("./dbconnect");
 const usermodel = require("../models/usermodel");
 
-export default async function find(username) {
+const find = async function (username) {
   dbconnect();
   const docs = await usermodel.find({
-    name: username
+    name: username,
   });
   return docs;
-}
+};
+module.exports = find

@@ -3,7 +3,7 @@ const usermodel = require("../models/usermodel");
 const query = require("../db/query");
 const dbconnect = require('../db/dbconnect')
 
-export default async function shopp(username, discriminator, args) {
+const  shopp = async function(username, discriminator, args) {
   dbconnect();
   var retorno = [];
   const docs = await query(username, discriminator);
@@ -281,3 +281,4 @@ export default async function shopp(username, discriminator, args) {
   }
   return retorno
 }
+module.exports = shopp

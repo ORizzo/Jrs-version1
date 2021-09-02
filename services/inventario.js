@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const embed = new Discord.MessageEmbed();
 const dbconnect = require("./db/dbconnect");
 const query = require("./db/query");
-export default async function inv(username, discriminator) {
+const inv = async function(username, discriminator) {
   dbconnect();
   const docs = await query(username, discriminator);
   var retorno = [];
@@ -47,3 +47,4 @@ export default async function inv(username, discriminator) {
   }
   return embedjr;
 }
+module.exports = inv

@@ -4,7 +4,7 @@ const usermodel = require("./models/usermodel");
 const cooldown = require("./cooldown");
 const find = require("./db/find")
 
-export default async function assalto(username, discriminator, args) {
+const assalto = async function(username, discriminator, args) {
   dbconnect();
   const docs = await query(username, discriminator);
   const person = await find(args[0]);

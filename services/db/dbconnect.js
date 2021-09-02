@@ -2,7 +2,7 @@ const env = require("dotenv");
 env.config();
 const mongoose = require("mongoose");
 
-export default function dbconnect() {
+const dbconnect = function () {
   mongoose.Promise = global.Promise;
   mongoose
     .connect(process.env.DB_IP, {
@@ -14,4 +14,5 @@ export default function dbconnect() {
         "Houve um erro ao se conectar ao banco de dados MongoDB" + err
       );
     });
-}
+};
+module.exports = dbconnect

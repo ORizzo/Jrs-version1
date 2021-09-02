@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const embed = new Discord.MessageEmbed();
 const dbconnect = require("./db/dbconnect");
 const shopmodel = require("./models/shopmodel");
-export default async function loja() {
+const loja = async function() {
   dbconnect();
   const prices = await shopmodel.find({
     name: "tabela de preços",
@@ -37,3 +37,4 @@ export default async function loja() {
     );
   return embedjr;
 }
+module.exports = loja

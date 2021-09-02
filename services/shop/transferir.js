@@ -2,14 +2,14 @@ const dbconnect = require("../db/dbconnect");
 const query = require("../db/query");
 const usermodel = require("../models/usermodel");
 const find = require("../db/find");
-export default async function transfer(username, discriminator, args) {
+const transfer = async function (username, discriminator, args) {
   var retorno = [];
   dbconnect();
   const docs = await query(username, discriminator);
   var context = parseInt(args[0]);
   if (context == NaN) {
     retorno = ["Erro", "O valor que você quer transferir não é um número."];
-    return retorno
+    return retorno;
   }
   var person = await find(args[1]);
   // A simple money transference you don't lose anything, but the money can be stealed.
@@ -52,4 +52,5 @@ export default async function transfer(username, discriminator, args) {
     }
   }
   return retorno;
-}
+};
+module.exports = transfer

@@ -2,7 +2,7 @@ const dbconnect = require("../db/dbconnect");
 const query = require("../db/query");
 const usermodel = require("../models/usermodel");
 
-export default async function sacar(username, discriminator, args) {
+const sacar = async function(username, discriminator, args) {
   var retorno = [];
   dbconnect();
   const docs = await query(username, discriminator);
@@ -43,3 +43,4 @@ export default async function sacar(username, discriminator, args) {
   }
   return retorno
 }
+module.exports = sacar
