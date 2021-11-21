@@ -15,4 +15,4 @@ const dbconnect = function () {
       );
     });
 };
-module.exports = dbconnect
+module.exports = dbconnect;

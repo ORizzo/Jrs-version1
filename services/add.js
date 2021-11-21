@@ -13,4 +13,4 @@ const add = async function () {
     .updateOne({}, {})
     .set("user.bank", docs[0].user.bank + 10000);
 };
-module.exports = add
+module.exports = add;

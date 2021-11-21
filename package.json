@@ -4,8 +4,8 @@
   "description": "Um bot de economia com inventário, interações e loja. Organiza o banco de dados por player com todas as infos.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon discord.js",
-    "dev": "node ",
+    "start": "node discord.js",
+    "dev": "nodemon discord.js ",
     "price": "node services/db/createprice.js"
   },
   "author": "Henrique Rizzo",
